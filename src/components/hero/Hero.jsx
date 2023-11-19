@@ -21,12 +21,11 @@ const Hero = () => {
           </AnimatePresence>
             <div className='text-white text-2xl mt-4 font-semibold max-sm:text-xl max-md:text-center'>Elevating Businesses through Code DevSquad Crafting Web Excellence</div>
             <div className='flex gap-5 mt-5'>
-                <div><i class="fa-brands fa-linkedin text-white text-3xl"></i></div>
-                <div><i class="fa-brands fa-square-twitter text-white text-3xl"></i></div>
-                <div><i class="fa-brands fa-square-instagram text-white text-3xl"></i></div>
+                <a href='https://www.linkedin.com/in/aabdullahsajid/' target='_blank' className='shadow-2xl'><i class="fa-brands fa-linkedin text-white text-3xl"></i></a>
+                <a href='https://twitter.com/aabdullahsajid' target='_blank' className='shadow-2xl'><i class="fa-brands fa-square-twitter text-white text-3xl"></i></a>
+                <a href='https://www.instagram.com/ch_bilaltalib/' target='_blank' className='shadow-2xl'><i class="fa-brands fa-square-instagram text-white text-3xl"></i></a>
             </div>
             <motion.div 
-                
                className='mt-5'>
               <a href="#" className='bg-[#1D222A] p-2 text-white rounded-xl font-semibold border border-[#758BFD]'>Contact us</a>
             </motion.div>
