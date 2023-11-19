@@ -10,7 +10,7 @@ const Intro = () => {
           <span className='bg-white text-[#232932] p-1 rounded'>Dev</span> Squad
         </div>
         <div className='mt-5 w-16'>
-        <LinearProgress/>
+            <LinearProgress style={{backgroundColor:"#1D222A",color:"#758BFD"}}/>
         </div>
       </div>
     </div>
