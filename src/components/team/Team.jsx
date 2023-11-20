@@ -25,6 +25,12 @@ const Team = () => {
                 link={'https://www.linkedin.com/in/hassan-tariq-588543246/'}
             />
             <TeamCard
+                userImg={'/umair.jfif'}
+                position={"Backend Developer"}
+                name={"Muhammad Umair Tanveer"}
+                link={'https://www.linkedin.com/in/muhammad-umair-b28b29227/'}
+            />
+            <TeamCard
                 userImg={'/hamza.jpg'}
                 position={'Designer & Video Editor'}
                 name={"Hamza Sadiq"}
