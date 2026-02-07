@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Hero = ({ handleForm, toggleForm }) => {
   return (
-    <section className='relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-background px-6 pt-20 pb-12'>
+    <section className='relative w-full min-h-[100dvh] flex items-center justify-center overflow-hidden bg-background px-6 pt-32 pb-12'>
       {/* Background Gradients */}
       <div className='absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none'>
         <div className='absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] animate-pulse-slow' />

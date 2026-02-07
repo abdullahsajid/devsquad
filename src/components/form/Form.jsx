@@ -41,7 +41,7 @@ const Form = ({ handleForm }) => {
                             type="text"
                             id='user_name'
                             placeholder='John Doe'
-                            className='bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all'
+                            className='bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-base text-white placeholder-slate-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all'
                         />
                     </div>
                     <div className='flex flex-col gap-2'>
@@ -50,7 +50,7 @@ const Form = ({ handleForm }) => {
                             type="email"
                             id='user_email'
                             placeholder='john@example.com'
-                            className='bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all'
+                            className='bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-base text-white placeholder-slate-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all'
                         />
                     </div>
                     <div className='flex flex-col gap-2'>
@@ -61,7 +61,7 @@ const Form = ({ handleForm }) => {
                             cols="30"
                             rows="4"
                             placeholder='Tell us about your project...'
-                            className='bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all resize-none'
+                            className='bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-base text-white placeholder-slate-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all resize-none'
                         ></textarea>
                     </div>
 

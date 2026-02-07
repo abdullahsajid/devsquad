@@ -30,7 +30,7 @@ const Main = () => {
         {toggleIntro && <Intro />}
       </AnimatePresence>
 
-      <div className={`${toggleForm ? "overflow-hidden h-screen" : ""} relative`}>
+      <div className={`${toggleForm ? "overflow-hidden h-[100dvh]" : ""} relative`}>
         <Navbar />
         <Hero handleForm={handleForm} toggleForm={toggleForm} />
         <Services />
