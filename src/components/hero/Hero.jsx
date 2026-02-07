@@ -5,9 +5,10 @@ const Hero = ({ handleForm, toggleForm }) => {
   return (
     <section className='relative w-full min-h-[100dvh] flex items-center justify-center overflow-hidden bg-background px-6 pt-32 pb-12'>
       {/* Background Gradients */}
+      {/* Background Gradients */}
       <div className='absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none'>
-        <div className='absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] animate-pulse-slow' />
-        <div className='absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[100px] animate-pulse-slow' style={{ animationDelay: '2s' }} />
+        <div className='absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px]' />
+        <div className='absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[100px]' />
       </div>
 
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-center z-10 w-full'>

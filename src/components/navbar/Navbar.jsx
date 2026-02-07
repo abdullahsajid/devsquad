@@ -66,24 +66,24 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className='md:hidden absolute top-full left-0 right-0 mx-4 mt-2 rounded-2xl bg-surface/95 backdrop-blur-xl border border-white/10 overflow-hidden shadow-2xl'
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className='fixed inset-0 top-[70px] z-40 bg-background/95 backdrop-blur-xl border-t border-white/10 md:hidden flex flex-col p-6'
           >
-            <ul className='flex flex-col p-6 gap-4'>
+            <ul className='flex flex-col gap-6 items-center mt-10'>
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className='block text-slate-300 hover:text-primary text-lg font-medium'
+                    className='text-2xl font-medium text-slate-300 hover:text-primary transition-colors'
                   >
                     {link.name}
                   </a>
                 </li>
               ))}
-              <button className='w-full btn-primary mt-4'>
+              <button className='btn-primary w-full max-w-xs mt-8 shadow-lg shadow-indigo-500/20'>
                 Contact Us
               </button>
             </ul>
