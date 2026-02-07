@@ -1,52 +1,88 @@
-import React, { useState } from 'react'
-import {motion,AnimatePresence} from "framer-motion";
-import { Link } from "react-router-dom";
-import Form from '../form/Form';
-const Hero = ({handleForm,toggleForm}) => {
+import React from 'react'
+import { motion } from "framer-motion";
+
+const Hero = ({ handleForm, toggleForm }) => {
   return (
-    <div className='relative z-0'>
-      {/* {toggleForm && <Form/>} */}
-      <div className={`${toggleForm ? "grid grid-cols-2 px-8 py-5 pt-20 h-fit max-sm:grid-cols-1":"grid grid-cols-2 px-8 py-5 pt-20 h-fit max-sm:grid-cols-1"}`}>
-          <div className='flex flex-col justify-center max-sm:items-center'>
-            <AnimatePresence >
-              <motion.div
-              layout 
-              initial={{y:30,opacity:0}}
-              whileInView={{y:0,opacity:1}}
-              exit={{y:-30,opacity:0}}
-              transition={{duration:0.7,ease:"backInOut"}}
-              className="before:content-['Dev_Squad'] text-8xl before:font-extrabold before:absolute before:left-[10px] before:top-[20px]
-              before:text-[#758BFD] before:z-[10] relative max-sm:text-5xl max-sm:w-full mb-3
-              max-sm:before:top-[13px] max-sm:before:left-[39px]">
-                <div className="text-8xl text-[#1D222A] font-extrabold max-sm:text-5xl max-sm:flex max-sm:justify-center">Dev Squad</div>
-              </motion.div>
-            </AnimatePresence>
-              <div className='text-white text-2xl mt-4 font-semibold max-sm:text-xl max-md:text-center'>Elevating Businesses through Code DevSquad Crafting Web Excellence</div>
-              <div className='flex gap-5 mt-5'>
-                  <a href='https://www.linkedin.com/in/aabdullahsajid/' target='_blank' className='shadow-2xl'><i class="fa-brands fa-linkedin text-white text-3xl"></i></a>
-                  <a href='https://twitter.com/aabdullahsajid' target='_blank' className='shadow-2xl'><i class="fa-brands fa-square-twitter text-white text-3xl"></i></a>
-                  <a href='https://www.instagram.com/ch_bilaltalib/' target='_blank' className='shadow-2xl'><i class="fa-brands fa-square-instagram text-white text-3xl"></i></a>
-              </div>
-              <div 
-                className='mt-5'onClick={handleForm}>
-                <a href='#' className='bg-[#1D222A] p-2 text-white rounded-xl font-semibold border border-[#758BFD]'>Contact us</a>
-              </div>
-          </div>
-          <div className='flex justify-center items-center max-sm:mt-8 max-sm:relative'>
-              <motion.div
-              layout 
-              initial={{y:30,opacity:0}}
-              whileInView={{y:0,opacity:1}}
-              exit={{y:-30,opacity:0}}
-              transition={{duration:0.7,ease:"easeInOut"}}
-              >
-                <img src="/PngItem_6812638.png" alt="" />
-              </motion.div>
-              <img src="/pat-2.png" className='opacity-60 invert w-24 h-24 max-sm:absolute max-sm:right-[-80px] max-sm:top-1'/>
-          </div>
+    <section className='relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-background px-6 pt-20 pb-12'>
+      {/* Background Gradients */}
+      <div className='absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none'>
+        <div className='absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] animate-pulse-slow' />
+        <div className='absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[100px] animate-pulse-slow' style={{ animationDelay: '2s' }} />
       </div>
-    </div>
+
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-center z-10 w-full'>
+
+        {/* Text Content */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className='flex flex-col justify-center text-center lg:text-left'
+        >
+          <div className="mb-6 inline-block">
+            <span className="py-2 px-4 rounded-full bg-surface border border-white/10 text-primary text-sm font-semibold tracking-wide uppercase shadow-lg backdrop-blur-sm">
+              🚀 Web Development Agency
+            </span>
+          </div>
+
+          <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold font-display tracking-tight mb-8 leading-[1.1]'>
+            <span className='text-slate-100 drop-shadow-sm'>Dev</span>
+            <span className='text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-secondary ml-2'>Squad</span>
+            <span className='text-primary'>.</span>
+          </h1>
+
+          <p className='text-slate-400 text-lg md:text-xl font-light mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed'>
+            Elevating businesses through creative code. We craft digital experiences with modern technologies, stunning aesthetics, and performance in mind.
+          </p>
+
+          <div className='flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center'>
+            <motion.button
+              whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(99, 102, 241, 0.4)" }}
+              whileTap={{ scale: 0.95 }}
+              onClick={handleForm}
+              className='btn-primary'
+            >
+              Start Project
+            </motion.button>
+
+            <div className='flex gap-4'>
+              <SocialLink href='https://www.linkedin.com/in/aabdullahsajid/' icon='fa-linkedin-in' />
+              <SocialLink href='https://twitter.com/aabdullahsajid' icon='fa-x-twitter' />
+              <SocialLink href='https://www.instagram.com/ch_bilaltalib/' icon='fa-instagram' />
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Hero Image/Animation */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className='relative flex justify-center items-center'
+        >
+          <div className='relative z-10 w-full max-w-[500px] animate-float'>
+            <div className='absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full opacity-20 blur-3xl' />
+            <img
+              src="/PngItem_6812638.png"
+              alt="DevSquad Illustration"
+              className='relative z-10 w-full h-auto object-contain drop-shadow-2xl'
+            />
+          </div>
+        </motion.div>
+
+      </div>
+    </section>
   )
 }
 
+const SocialLink = ({ href, icon }) => (
+  <a
+    href={href}
+    target='_blank'
+    rel='noreferrer'
+    className='w-12 h-12 flex items-center justify-center rounded-full bg-surface border border-white/5 text-slate-400 hover:text-white hover:border-primary/50 hover:bg-primary/50 transition-all duration-300'
+  >
+    <i className={`fa-brands ${icon} text-xl`}></i>
+  </a>
+)
 export default Hero

@@ -1,13 +1,26 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <div className='px-8 py-5 border-t-2 border-t-[#29282e]'>
-        <p className='flex justify-center items-center text-[#98a1b6]'>2023 ©&nbsp;
-        <a href="#" className='underline'>Dev Squad</a>
-        . All rights reserved.
-        </p>
-    </div>
+    <footer className='py-8 bg-background border-t border-white/5'>
+      <div className='max-w-7xl mx-auto px-6 text-center'>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className='text-2xl font-bold font-display text-white mb-6 flex justify-center items-center gap-2'>
+            <span className='w-8 h-8 bg-gradient-to-tr from-primary to-secondary rounded-lg flex items-center justify-center text-white font-extrabold text-sm shadow-md'>D</span>
+            <span className='tracking-tight'>DevSquad</span>
+          </div>
+          <p className='text-slate-500 text-sm'>
+            &copy; {new Date().getFullYear()} <span className='text-primary font-medium'>DevSquad</span>. All rights reserved.
+          </p>
+        </motion.div>
+      </div>
+    </footer>
   )
 }
 

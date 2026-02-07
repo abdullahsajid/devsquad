@@ -1,18 +1,30 @@
 import React from 'react'
-import LinearProgress from '@mui/material/LinearProgress';
+import { motion } from 'framer-motion';
 import '../../../src/App.css';
 const Intro = () => {
 
   return (
-    <div className='bg-[#232932] h-screen flex justify-center items-center translate-y-0 transition-all'>
-      <div className='flex justify-center items-center flex-col'>
-        <div className='text-white font-semibold'>
-          <span className='bg-white text-[#232932] p-1 rounded'>Dev</span> Squad
+    <div className='fixed inset-0 bg-background z-[100] flex justify-center items-center overflow-hidden'>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className='flex flex-col items-center'
+      >
+        <div className='text-4xl md:text-6xl font-bold font-display text-white mb-6 relative flex items-center'>
+          <span className='bg-primary text-white px-4 py-2 rounded-xl mr-3 inline-block shadow-lg shadow-primary/40'>Dev</span>
+          Squad
         </div>
-        <div className='mt-5 w-16'>
-            <LinearProgress style={{backgroundColor:"#1D222A",color:"#758BFD"}}/>
+
+        <div className='w-48 h-1.5 bg-surface rounded-full overflow-hidden'>
+          <motion.div
+            initial={{ width: 0 }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 1.5, ease: "easeInOut", delay: 0.5 }}
+            className='h-full bg-gradient-to-r from-primary to-secondary'
+          />
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

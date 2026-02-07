@@ -1,47 +1,79 @@
-import React from 'react'
-import TeamCard from './TeamCard'
+import { motion } from 'framer-motion';
+import TeamCard from './TeamCard';
+
+const teamData = [
+    {
+        name: "Bilal Talib",
+        position: "Manager",
+        userImg: "/bilal.png",
+        link: "https://www.linkedin.com/in/bilal-talib-121ch/"
+    },
+    {
+        name: "Abdullah Sajid",
+        position: "Frontend Developer",
+        userImg: "/abdullah.jpg",
+        link: "https://www.linkedin.com/in/aabdullahsajid/"
+    },
+    {
+        name: "Muhammad Ali Ahmad",
+        position: "Full Stack Developer",
+        userImg: "/alii.jpg",
+        link: "https://www.linkedin.com/in/muhammad-ali-ahmad-7a5203282/"
+    },
+    {
+        name: "Hassan Tariq",
+        position: "Full Stack Developer",
+        userImg: "/hassan.jfif",
+        link: "https://www.linkedin.com/in/hassan-tariq-588543246/"
+    },
+    {
+        name: "Muhammad Umair",
+        position: "Backend Developer",
+        userImg: "/umair.jfif",
+        link: "https://www.linkedin.com/in/muhammad-umair-b28b29227/"
+    },
+    {
+        name: "Hamza Sadiq",
+        position: "Designer & Editor",
+        userImg: "/hamza.jpg",
+        link: "https://www.linkedin.com/in/hamza-sadiq-315b56216/"
+    }
+];
 
 const Team = () => {
-  return (
-    <div className='bg-[#252B33] px-8 py-5 pt-20 relative'>
-        <div className='flex justify-center items-center text-3xl font-extrabold text-white'>Squad Member</div>
-        <div className='grid grid-cols-3 gap-4 mt-6 max-sm:grid-cols-1'>
-            <TeamCard
-                userImg={'/bilal.png'}
-                position={'Manager'}
-                name={"Bilal Talib"}
-                link={'https://www.linkedin.com/in/bilal-talib-121ch/'}
-            />
-            <TeamCard
-                userImg={'/abdullah.jpg'}
-                position={'Frontend Developer'}
-                name={"Abdullah Sajid"}
-                link={'https://www.linkedin.com/in/aabdullahsajid/'}
-            />
-            <TeamCard
-                userImg={'/hassan.jfif'}
-                position={'Full Stack Developer'}
-                name={"Hassan Tariq"}
-                link={'https://www.linkedin.com/in/hassan-tariq-588543246/'}
-            />
-            <TeamCard
-                userImg={'/umair.jfif'}
-                position={"Backend Developer"}
-                name={"Muhammad Umair Tanveer"}
-                link={'https://www.linkedin.com/in/muhammad-umair-b28b29227/'}
-            />
-            <TeamCard
-                userImg={'/hamza.jpg'}
-                position={'Designer & Video Editor'}
-                name={"Hamza Sadiq"}
-                link={'https://www.linkedin.com/in/hamza-sadiq-315b56216/'}
-            />
-        </div>
-        <div className='absolute bottom-[20px] right-[-40px] max-sm:bottom-[50%] max-sm:right-[-60px]'>
-            <img src="/pat-2.png" className='opacity-60 invert w-24 h-24' alt="" />
-        </div>
-    </div>
-  )
+    return (
+        <section id="team" className='py-24 px-6 bg-background relative overflow-hidden'>
+            {/* Background decorative blobs */}
+            <div className='absolute top-1/4 right-0 w-[500px] h-[500px] bg-secondary/5 blur-[100px] rounded-full pointer-events-none' />
+            <div className='absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 blur-[100px] rounded-full pointer-events-none' />
+
+            <div className='max-w-7xl mx-auto relative z-10'>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className='text-center mb-20'
+                >
+                    <span className="py-2 px-4 rounded-full bg-surface/50 border border-white/5 text-accent text-sm font-semibold tracking-wide uppercase shadow-lg backdrop-blur-sm mb-6 inline-block">
+                        Our Team
+                    </span>
+                    <h2 className='text-4xl md:text-5xl font-bold font-display mb-6'>
+                        Meet The <span className='text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent'>Squad</span>
+                    </h2>
+                    <p className='text-slate-400 max-w-2xl mx-auto text-lg'>
+                        The talented individuals behind our success and your digital transformation.
+                    </p>
+                </motion.div>
+
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-center'>
+                    {teamData.map((member, index) => (
+                        <TeamCard key={index} {...member} index={index} />
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
 }
 
 export default Team
