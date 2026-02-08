@@ -13,10 +13,10 @@ const Footer = () => {
         >
           <div className='text-2xl font-bold font-display text-white mb-6 flex justify-center items-center gap-2'>
             <span className='w-8 h-8 bg-gradient-to-tr from-primary to-secondary rounded-lg flex items-center justify-center text-white font-extrabold text-sm shadow-md'>D</span>
-            <span className='tracking-tight'>DevSquad</span>
+            <span className='tracking-tight'>DevSquadHub</span>
           </div>
           <p className='text-slate-500 text-sm'>
-            &copy; {new Date().getFullYear()} <span className='text-primary font-medium'>DevSquad</span>. All rights reserved.
+            &copy; {new Date().getFullYear()} <span className='text-primary font-medium'>DevSquadHub</span>. All rights reserved.
           </p>
         </motion.div>
       </div>

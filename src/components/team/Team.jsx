@@ -59,7 +59,7 @@ const Team = () => {
                         Our Team
                     </span>
                     <h2 className='text-4xl md:text-5xl font-bold font-display mb-6'>
-                        Meet The <span className='text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent'>Squad</span>
+                        Meet The <span className='text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent'>SquadHub</span>
                     </h2>
                     <p className='text-slate-400 max-w-2xl mx-auto text-lg'>
                         The talented individuals behind our success and your digital transformation.

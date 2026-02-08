@@ -28,7 +28,7 @@ const Hero = ({ handleForm, toggleForm }) => {
 
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold font-display tracking-tight mb-8 leading-[1.1]'>
             <span className='text-slate-100 drop-shadow-sm'>Dev</span>
-            <span className='text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-secondary ml-2'>Squad</span>
+            <span className='text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-secondary ml-2'>SquadHub</span>
             <span className='text-primary'>.</span>
           </h1>
 
@@ -65,7 +65,7 @@ const Hero = ({ handleForm, toggleForm }) => {
             <div className='absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full opacity-20 blur-3xl' />
             <img
               src="/PngItem_6812638.png"
-              alt="DevSquad Illustration"
+              alt="DevSquadHub Illustration"
               className='relative z-10 w-full h-auto object-contain drop-shadow-2xl'
             />
           </div>

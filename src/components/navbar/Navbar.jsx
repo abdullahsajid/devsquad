@@ -21,9 +21,9 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 flex justify-center ${scrolled ? 'py-4' : 'py-6'}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 flex justify-center px-4 md:px-6 ${scrolled ? 'py-4' : 'py-6'}`}>
       <div
-        className={`w-full max-w-7xl mx-4 md:mx-6 rounded-2xl flex justify-between items-center px-6 transition-all duration-300 ${scrolled
+        className={`w-full max-w-7xl rounded-2xl flex justify-between items-center px-6 transition-all duration-300 ${scrolled
           ? 'glass-nav py-3'
           : 'bg-transparent py-4'
           }`}
@@ -32,7 +32,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className='text-2xl font-bold font-display flex items-center gap-2 cursor-pointer group'>
           <span className='w-10 h-10 bg-gradient-to-tr from-primary to-secondary rounded-xl flex items-center justify-center text-white font-extrabold text-lg shadow-lg shadow-primary/25 group-hover:scale-110 transition-transform'>D</span>
-          <span className='tracking-tight text-slate-100 group-hover:text-primary transition-colors'>DevSquad</span>
+          <span className='tracking-tight text-slate-100 group-hover:text-primary transition-colors'>DevSquadHub</span>
         </div>
 
         {/* Desktop Menu */}
